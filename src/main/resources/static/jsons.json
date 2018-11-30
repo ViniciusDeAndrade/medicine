@@ -1,0 +1,126 @@
+client \/ is a Person
+
+{	
+	"person" : {
+		"name" : "Vinicius",
+		"email" : "viniciusclo@gmail.com",
+		"password" : "senha",
+		"address" : {
+			"street" : "rua da mangueira",
+			"number" : "10",
+			"city" : "Rio Tinto",
+			"phone" : "111 222"
+		}
+	},
+		"medicalConsultations" : []
+}
+
+MedicalConsultation \/ //
+
+{
+	"date" : "01/12/2018 10:30",
+	"price": "80",
+	"id": 1,
+	"client" : {
+		"person": {
+			"id": 2,
+			"name" : "Vinicius",
+			"email" : "viniciusclo@gmail.com",
+			"password" : "senha",
+			"address" : {
+				"street" : "rua da mangueira",
+				"number" : "10",
+				"city" : "Rio Tinto",
+				"phone" : "111 222"
+			}
+		}
+	},
+	"doctor": {
+	"person": {
+			"id" : 5,
+			"name": "Doutor",
+			"email": "doutor@algumacoisa.com",
+			"password": "123",
+			"address": {
+				"street": "praça João Pessoa",
+				"number": "100",
+				"city": "Jacaraú",
+				"phone": "333 444"
+			}
+	},
+	"type": "DENTIST",
+	"specialties": [
+		"cirurgião dentista",
+		"periodontista"
+	]
+	
+	}
+}
+
+
+doctor \/ is a Person
+
+{
+	"person" : {
+		"name": "Doutor",
+		"email": "doutor@algumacoisa.com",
+		"password": "123",
+		"address": {
+			"street": "praça João Pessoa",
+			"number": "100",
+			"city": "Jacaraú",
+			"phone": "333 444"
+		}
+	},
+	"medicalConsultations" : [],
+	"type": "DENTIST",
+	"specialties": [
+		"cirurgião dentista",
+		"periodontista"
+	]
+}
+------------------------------
+
+
+
+{	
+	"date" : "01/12/2018 10:30",
+	"price": "80",	
+	"client" : {
+    	"id": 1,
+        "person": {
+            "id": 2,
+            "name": "Vinicius",
+            "email": "viniciusclo@gmail.com",
+            "password": "senha",
+            "address": {
+                "street": "rua da mangueira",
+                "number": "10",
+                "city": "Rio Tinto",
+                "phone": "111 222"
+            }
+        }
+    },
+    "doctor" : {
+    	"id": 4,
+        "person": {
+            "id": 5,
+            "name": "Doutor",
+            "email": "doutor@algumacoisa.com",
+            "password": "123",
+            "address": {
+                "street": "praça João Pessoa",
+                "number": "100",
+                "city": "Jacaraú",
+                "phone": "333 444"
+            }
+        },
+        "medicalConsultations": [],
+        "type": "DENTIST",
+        "specialties": [
+            "cirurgião dentista",
+            "periodontista"
+        ]
+    
+    }
+}  
